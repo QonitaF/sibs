@@ -1,4 +1,12 @@
 <h2 class="text-center">DATA NASABAH</h2>
+<div style="text-align: center;" class="row m-t-30">
+    <div class="col-sm-12">
+        <?php $no = 1;
+        foreach ($saldoku as $data) : ?>
+            <p><b>Total saldo penjualanku : Rp. <?= number_format($data->total, 0, ',', '.'); ?></b></p>
+        <?php endforeach ?>
+    </div>
+</div>
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
         <li class="breadcrumb-item active" aria-current="page">laporan Penjualan</li>
@@ -51,13 +59,5 @@
             </table>
         </div>
         <!-- END DATA TABLE-->
-    </div>
-</div>
-<div class="row m-t-30">
-    <div class="col-sm-12">
-        <?php $no = 1;
-        foreach ($saldoku as $data) : ?>
-            <p><b>Total Penjualan Sampah : Rp. <?= number_format($data->total, 0, ',', '.'); ?></b></p>
-        <?php endforeach ?>
     </div>
 </div>
