@@ -13,14 +13,19 @@
                                 <option value="<?= $u->id_users; ?>"><?= $u->name ?></option>
                             <?php endforeach; ?>
                         </select>
-                        <?= form_error('id_users', '<small class="text-danger pl-3">', '</small>'); ?>
                     </div>
                     <div class="form-group">
-                        <label for="id_katalog">Jenis Sampah</label>
-                        <input list="data_santri" type="text" name="id_katalog" id="id_katalog" class="form-control form-control-user" placeholder="id katalog atau nama katalog" onchange="return autofill();">
+                        <label for="id_katalog">Sampah</label>
+                        <select class="form-control" id="id_katalog" multiple name="id_katalog" onchange="return autofill();" required>
+                            <?php foreach ($sampah as $u) : ?>
+                                <option value="<?= $u->id_katalog; ?>"><?= $u->nama_katalog ?></option>
+                            <?php endforeach; ?>
+                        </select>
                     </div>
+
+
                     <div class="form-group">
-                        <input readonly class="form-control form-control-user" type="text" id="nama_katalog">
+                        <input readonly hidden class="form-control form-control-user" type="text" id="nama_katalog">
                     </div>
 
                     <div class="form-group">

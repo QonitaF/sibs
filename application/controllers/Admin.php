@@ -512,6 +512,7 @@ class Admin extends CI_Controller
             'users' => $this->db->get_where('tbl_users', ['email' => $this->session->userdata('email')])->row_array(),
             'user' => $this->db->get('tbl_users')->result_array(),
             'nasabah' => $this->Users_model->getAllUsersNasabah(),
+            'sampah' => $this->Katalog_model->getAll(),
             'katalog' => $this->db->get('tbl_katalog')->result_array(),
         ];
         $data['record'] =  $this->Penjualan_model->tampil_data();

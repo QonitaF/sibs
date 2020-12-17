@@ -22,4 +22,12 @@ class Katalog_model extends CI_Model
         $this->db->or_like('tbl_katalog.harga_katalog', $keyword);
         return $this->db->get()->result();
     }
+    public function getAll()
+    {
+        $this->db->select('*');
+        $this->db->from('tbl_katalog');
+        $result = $this->db->get();
+
+        return $result->result();
+    }
 }

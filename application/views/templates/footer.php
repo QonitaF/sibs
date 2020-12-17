@@ -35,6 +35,7 @@
 
 <script>
     $('#id_users').select2();
+    $('#id_katalog').select2();
 </script>
 
 <script>
