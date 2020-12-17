@@ -6,13 +6,6 @@
             <div class="card-body">
 
                 <form autocomplete="off" action="<?= base_url('admin/create_penjualan_sampah'); ?>" method="POST">
-
-                    <div class="form-group">
-                        <label for="time_create_penjualan">Tanggal</label>
-                        <input type="datetime-local" class="form-control" id="time_create_penjualan" name="time_create_penjualan" required>
-                        <?= form_error('time_create_penjualan', '<small class="text-danger pl-3">', '</small>'); ?>
-                    </div>
-
                     <div class="form-group">
                         <label for="id_users">Nama</label>
                         <select class="form-control" id="id_users" multiple name="id_users" required>
@@ -22,17 +15,6 @@
                         </select>
                         <?= form_error('id_users', '<small class="text-danger pl-3">', '</small>'); ?>
                     </div>
-
-                    <!-- <div class="form-group">
-                        <label for="id_katalog">Jenis Sampah</label>
-                        <select class="form-control" id="id_katalog" name="id_katalog" required>
-                            <?php foreach ($katalog as $k) : ?>
-                                <option value="<?= $k["id_katalog"] ?>"><?= $k["nama_katalog"]; ?></option>
-                            <?php endforeach; ?>
-                        </select>
-                        <?= form_error('id_katalog', '<small class="text-danger pl-3">', '</small>'); ?>
-                    </div> -->
-
                     <div class="form-group">
                         <label for="id_katalog">Jenis Sampah</label>
                         <input list="data_santri" type="text" name="id_katalog" id="id_katalog" class="form-control form-control-user" placeholder="id katalog atau nama katalog" onchange="return autofill();">

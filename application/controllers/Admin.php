@@ -532,7 +532,7 @@ class Admin extends CI_Controller
             $this->load->view('templates/footer');
         } else {
             $data = [
-                'time_create_penjualan' => $this->input->post('time_create_penjualan'),
+                'time_create_penjualan' => date("Y-m-d h:i:s"),
                 'id_users' => $this->input->post('id_users'),
                 'id_katalog' => $this->input->post('id_katalog'),
                 'berat_penjualan' => $this->input->post('berat_penjualan'),
