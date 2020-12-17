@@ -26,7 +26,6 @@
                 <thead>
                     <tr>
                         <th>No</th>
-                        <th>Nama</th>
                         <th>Tangal</th>
                         <th>Katalog</th>
                         <th>Harga</th>
@@ -40,7 +39,6 @@
                     foreach ($penjualanku as $data) : ?>
                         <tr>
                             <td><?= $no++ ?></td>
-                            <td><?= $data->name ?></td>
                             <td><?= $data->time_create_penjualan ?></td>
                             <td><?= $data->nama_katalog ?></td>
                             <td>Rp. <?= number_format($data->harga_penjualan, 0, ',', '.'); ?></td>
