@@ -58,7 +58,7 @@
     function total() {
         var as = parseInt(document.getElementById('berat_penjualan').value);
         var ad = parseInt(document.getElementById('harga_katalog').value);
-        var jumlah_harga = as * ad * 3.5;
+        var jumlah_harga = as * ad;
         document.getElementById('total_penjualan').value = jumlah_harga;
     }
 
