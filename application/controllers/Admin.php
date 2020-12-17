@@ -517,11 +517,7 @@ class Admin extends CI_Controller
         ];
         $data['record'] =  $this->Penjualan_model->tampil_data();
 
-        $this->form_validation->set_rules('time_create_penjualan', 'tanggal', 'required');
-        $this->form_validation->set_rules('id_users', 'nama', 'required');
-        $this->form_validation->set_rules('id_katalog', 'jenis', 'required');
-        $this->form_validation->set_rules('berat_penjualan', 'berat', 'required');
-        $this->form_validation->set_rules('harga_penjualan', 'harga', 'required');
+
         $this->form_validation->set_rules('total_penjualan', 'total', 'required');
 
         if ($this->form_validation->run() == FALSE) {
