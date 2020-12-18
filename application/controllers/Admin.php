@@ -672,7 +672,7 @@ class Admin extends CI_Controller
         $old_image = $data["users"]["gambar_users"];
 
         $this->form_validation->set_rules('name', 'nama', 'required');
-        $this->form_validation->set_rules('email', 'email', 'required');
+        // $this->form_validation->set_rules('email', 'email', 'required');
         $this->form_validation->set_rules('rt_users', 'rt', 'required');
         $this->form_validation->set_rules('rw_users', 'rw', 'required');
         $this->form_validation->set_rules('alamat_users', 'alamat', 'required');
@@ -715,7 +715,7 @@ class Admin extends CI_Controller
                 }
             }
 
-            $this->db->where('email', $this->input->post('email'));
+            $this->db->where('id_users', $this->session->userdata('id_users'));
             $this->db->update('tbl_users', $data);
 
             $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Data Profile Berhasil Diubah!</div>');
