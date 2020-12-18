@@ -48,8 +48,8 @@
                         <div class="login-form">
                             <form action="<?= base_url('auth/loginForm'); ?>" method="post">
                                 <div class="form-group">
-                                    <label for="email">email</label>
-                                    <input class="au-input au-input--full" type="email" name="email" placeholder="email">
+                                    <label for="email">username</label>
+                                    <input class="au-input au-input--full" type="text" name="email" placeholder="username">
                                 </div>
                                 <div class="form-group">
                                     <label for="password">Password</label>
