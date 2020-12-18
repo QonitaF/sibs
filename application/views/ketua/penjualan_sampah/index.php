@@ -21,12 +21,12 @@
                     <?php foreach ($penjualan as $penjual) : ?>
                         <tr>
                             <td><?= $no++; ?></td>
-                            <td><?= $penjual["time_create_penjualan"]; ?></td>
-                            <td><?= $penjual["name"]; ?></td>
-                            <td><?= $penjual["nama_katalog"]; ?></td>
-                            <td><?= $penjual["berat_penjualan"]; ?></td>
-                            <td>Rp. <?= number_format($penjual["harga_penjualan"], 0, ',', '.'); ?></td>
-                            <td>Rp. <?= number_format($penjual["total_penjualan"], 0, ',', '.'); ?></td>
+                            <td><?= $penjual->time_create_penjualan; ?></td>
+                            <td><?= $penjual->name; ?></td>
+                            <td><?= $penjual->nama_katalog; ?></td>
+                            <td><?= $penjual->berat_penjualan; ?></td>
+                            <td>Rp. <?= number_format($penjual->harga_penjualan, 0, ',', '.'); ?></td>
+                            <td>Rp. <?= number_format($penjual->total_penjualan, 0, ',', '.'); ?></td>
                         </tr>
                     <?php endforeach; ?>
 

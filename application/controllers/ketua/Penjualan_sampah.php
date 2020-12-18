@@ -21,7 +21,8 @@ class Penjualan_sampah extends CI_Controller
         $data = [
             'title' => 'Ketua | Penjualan Sampah',
             'users' => $this->db->get_where('tbl_users', ['email' => $this->session->userdata('email')])->row_array(),
-            'penjualan' => $this->Penjualan_model->getAllPenjualan()
+            // 'penjualan' => $this->Penjualan_model->getAllPenjualan()
+            'penjualan' => $this->Penjualan_model->getAllPenjualanInKetua()
         ];
 
         $this->load->view('templates/header', $data);
