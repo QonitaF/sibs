@@ -55,11 +55,13 @@
         });
     }
 
-    function total() {
-        var as = parseInt(document.getElementById('berat_penjualan').value);
-        var ad = parseInt(document.getElementById('harga_katalog').value);
-        var jumlah_harga = as * ad;
-        document.getElementById('total_penjualan').value = jumlah_harga;
+    function sum() {
+        var txtFirstNumberValue = document.getElementById('berat_penjualan').value;
+        var txtSecondNumberValue = document.getElementById('harga_katalog').value;
+        var result = parseFloat(txtFirstNumberValue) * parseFloat(txtSecondNumberValue);
+        if (!isNaN(result)) {
+            document.getElementById('total_penjualan').value = result;
+        }
     }
 
     $(document).ready(function() {

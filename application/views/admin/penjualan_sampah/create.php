@@ -30,12 +30,12 @@
 
                     <div class="form-group">
                         <label for="berat_penjualan">Berat</label>
-                        <input type="text" class="form-control" id="berat_penjualan" name="berat_penjualan" onchange="total()" required>
+                        <input type="text" class="form-control" id="berat_penjualan" name="berat_penjualan" onkeyup="sum();" required>
                     </div>
 
                     <div class="form-group">
                         <label for="harga_penjualan">Harga</label>
-                        <input type="text" class="form-control" id="harga_katalog" name="harga_penjualan" onchange="total()" required>
+                        <input type="text" class="form-control" id="harga_katalog" name="harga_penjualan" onkeyup="sum();" required>
                     </div>
 
                     <div class="form-group">
