@@ -70,7 +70,7 @@ class Profile extends CI_Controller
                 }
             }
 
-            $this->db->where('email', $this->input->post('email'));
+            $this->db->where('id_users', $this->session->userdata('id_users'));
             $this->db->update('tbl_users', $data);
 
             $this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">Data Profile Berhasil Diubah!</div>');

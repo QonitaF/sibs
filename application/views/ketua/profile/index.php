@@ -15,8 +15,8 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="text" class="form-control" id="email" name="email" required value="<?= $users["email"]; ?>" readonly>
+                        <label for="email">Username</label>
+                        <input type="text" class="form-control" id="email" name="email" required value="<?= $users["email"]; ?>">
                         <?= form_error('email', '<small class="text-danger pl-3">', '</small>'); ?>
                     </div>
 
