@@ -3,7 +3,7 @@
     <div class="col-sm-12">
         <?php $no = 1;
         foreach ($saldoku as $data) : ?>
-            <p><b>Total saldo penjualanku : Rp. <?= number_format($data->total, 0, ',', '.'); ?></b></p>
+            <p><b>Total Saldo : Rp. <?= number_format($data->total, 0, ',', '.'); ?></b></p>
         <?php endforeach ?>
     </div>
 </div>

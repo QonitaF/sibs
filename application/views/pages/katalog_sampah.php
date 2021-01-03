@@ -17,7 +17,7 @@
                         </div>
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item"><?= $kat['nama_jenis_sampah']; ?></li>
-                            <li class="list-group-item">Harga Per <?= $kat['satuan_katalog']; ?> <?= $kat['harga_katalog']; ?></li>
+                            <li class="list-group-item"> Per <?= $kat['satuan_katalog']; ?> <?= $kat['harga_katalog']; ?></li>
                         </ul>
                     </div>
                 <?php endforeach; ?>
