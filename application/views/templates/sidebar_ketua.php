@@ -24,6 +24,13 @@
                     </a>
                 </li>
                 <li>
+                    <a href="<?= base_url('ketua/laporan_by'); ?>">
+                        <i class="far fa-clipboard"></i>
+                        Laporan Bulan Tahun
+                    </a>
+                </li>
+
+                <li>
                     <a href="<?= base_url('ketua/profile'); ?>">
                         <i class="far fa-user"></i>
                         Profile

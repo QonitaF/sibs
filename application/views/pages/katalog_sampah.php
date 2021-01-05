@@ -7,23 +7,26 @@
             <input class="form-control form-control-sm ml-3 w-75" name="keyword" type="text" placeholder="Search" aria-label="Search">
         </form>
         <div class="row m-t-30">
-            <div class="col">
-                <!-- <div class="card-deck"> -->
-                <?php foreach ($katalog as $kat) : ?>
-                    <div class="card">
-                        <img style="height: 150px;" src="<?= base_url('./assets/images/katalog/' . $kat['gambar_katalog']); ?>" class="img-thumbnail" height="10" alt="Katalog">
-                        <div class="card-body">
-                            <h5 class="card-title"><?= $kat['nama_katalog']; ?></h5>
-                            <p class="card-text"><?= $kat['keterangan_katalog'] ?></p>
+            <div class="col-md">
+                <div class="card-deck">
+                    <?php foreach ($katalog as $kat) : ?>
+
+                        <div class="card ml-5">
+                            <img style="height: 150px;" src="<?= base_url('./assets/images/katalog/' . $kat['gambar_katalog']); ?>" class="img-thumbnail" height="10" alt="Katalog">
+                            <div class="card-body">
+                                <h5 class="card-title"><?= $kat['nama_katalog']; ?></h5>
+                                <p class="card-text"><?= $kat['keterangan_katalog'] ?></p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><?= $kat['nama_jenis_sampah']; ?></li>
+                                <li class="list-group-item"> Per <?= $kat['satuan_katalog']; ?> <?= $kat['harga_katalog']; ?></li>
+                            </ul>
                         </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item"><?= $kat['nama_jenis_sampah']; ?></li>
-                            <li class="list-group-item"> Per <?= $kat['satuan_katalog']; ?> <?= $kat['harga_katalog']; ?></li>
-                        </ul>
-                    </div>
-                <?php endforeach; ?>
-                <!-- </div> -->
+
+                    <?php endforeach; ?>
+                </div>
             </div>
+
         </div>
         <!-- DATA TABLE-->
         <!-- END DATA TABLE-->

@@ -46,6 +46,31 @@ class Laporan_keuangan_ketua_model extends CI_Model
 
         return $result->result();
     }
+    public function getNasabahbybulantahun($keyword1, $keyword2)
+    {
+        $this->db->select('tbl_users.name,tbl_penjualan.time_create_penjualan,tbl_katalog.nama_katalog,sum(tbl_penjualan.berat_penjualan) as berat,tbl_penjualan.harga_penjualan,sum(tbl_penjualan.total_penjualan) as total');
+        $this->db->from('tbl_penjualan');
+        $this->db->join('tbl_katalog', 'tbl_katalog.id_katalog=tbl_penjualan.id_katalog');
+        $this->db->join('tbl_users', 'tbl_users.id_users=tbl_penjualan.id_users');
+        $this->db->group_by('tbl_penjualan.id_penjualan');
+        $this->db->where('bulan=', $keyword1);
+        $this->db->where('tahun=', $keyword2);
+        $result = $this->db->get();
+
+        return $result->result();
+    }
+    public function getSaldokubybulantahun($keyword1, $keyword2)
+    {
+        $this->db->select('sum(tbl_penjualan.berat_penjualan) as berat,sum(tbl_penjualan.total_penjualan) as total');
+        $this->db->from('tbl_penjualan');
+        $this->db->join('tbl_katalog', 'tbl_katalog.id_katalog=tbl_penjualan.id_katalog');
+        $this->db->where('bulan=', $keyword1);
+        $this->db->where('tahun=', $keyword2);
+
+        $result = $this->db->get();
+
+        return $result->result();
+    }
     public function getSaldoku($keyword1, $keyword2)
     {
         $this->db->select('sum(tbl_penjualan.berat_penjualan) as berat,sum(tbl_penjualan.total_penjualan) as total');

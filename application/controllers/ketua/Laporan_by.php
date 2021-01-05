@@ -1,6 +1,6 @@
 <?php
 
-class Laporan_keuangan extends CI_Controller
+class Laporan_by extends CI_Controller
 {
     public function __construct()
     {
@@ -28,7 +28,7 @@ class Laporan_keuangan extends CI_Controller
         $this->load->view('templates/header_mobile');
         $this->load->view('templates/sidebar_ketua');
         $this->load->view('templates/topbar_ketua');
-        $this->load->view('ketua/laporan/keuangan');
+        $this->load->view('ketua/laporan/keuangan_by');
         $this->load->view('templates/footer');
     }
 
@@ -82,18 +82,19 @@ class Laporan_keuangan extends CI_Controller
         $data = [
             'awal' =>  $keyword1,
             'akhir' => $keyword2,
-            'totalpenjualan' => $this->Laporan_keuangan_ketua_model->getSaldoku($keyword1, $keyword2),
+            'users' => $this->db->get_where('tbl_users', ['email' => $this->session->userdata('email')])->row_array(),
+            'totalpenjualan' => $this->Laporan_keuangan_ketua_model->getSaldokubybulantahun($keyword1, $keyword2),
             // 'totalpenjualan' => $this->Penjualan_model->getTotalPenjualan(),
             'logo' => '<img src="assets/images/icon/logo-mini.png" alt="" class="mr-3">',
             'gambar' => 'assets/img/perbaikan/'
         ];
-        $data['nasabah'] = $this->Laporan_keuangan_ketua_model->getNasabahbytgl($keyword1, $keyword2);
+        $data['nasabah'] = $this->Laporan_keuangan_ketua_model->getNasabahbybulantahun($keyword1, $keyword2);
         // $this->load->view('ketua/laporan/pdf/Keuangan', $data);
         $this->load->view('templates/header', $data);
         $this->load->view('templates/header_mobile');
         $this->load->view('templates/sidebar_ketua');
         $this->load->view('templates/topbar_ketua');
-        $this->load->view('ketua/laporan/keuangan_by');
+        $this->load->view('ketua/laporan/Keuangan_by_bulan_tahun');
         $this->load->view('templates/footer');
     }
 }

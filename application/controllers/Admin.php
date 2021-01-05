@@ -530,6 +530,8 @@ class Admin extends CI_Controller
         } else {
             $data = [
                 'time_create_penjualan' => date("Y-m-d h:i:s"),
+                'bulan' => date("m"),
+                'tahun' => date("Y"),
                 'id_users' => $this->input->post('id_users'),
                 'id_katalog' => $this->input->post('id_katalog'),
                 'berat_penjualan' => $this->input->post('berat_penjualan'),
