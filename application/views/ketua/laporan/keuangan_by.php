@@ -35,3 +35,35 @@
     </form>
 
 </div>
+
+<div class="row">
+
+    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Tanggal</th>
+                <th>Nama</th>
+                <th>Jenis Sampah</th>
+                <th>Berat</th>
+                <th>Harga</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php $no = 1;
+            foreach ($nasabah as $data) : ?>
+                <tr>
+                    <td><?= $no++ ?></td>
+                    <td><?= $data->time_create_penjualan ?></td>
+                    <td><?= $data->name ?></td>
+                    <td><?= $data->nama_katalog ?></td>
+                    <td><?= $data->berat ?></td>
+                    <td>Rp. <?= number_format($data->harga_penjualan, 0, ',', '.'); ?></td>
+                    <td>Rp. <?= number_format($data->total, 0, ',', '.'); ?></td>
+                </tr>
+            <?php endforeach ?>
+
+        </tbody>
+    </table>
+</div>
