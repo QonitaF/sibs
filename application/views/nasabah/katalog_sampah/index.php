@@ -8,7 +8,7 @@
     <div class="card-deck">
         <?php foreach ($katalog as $kat) : ?>
             <div class="card">
-                <img style="height: 150px;" src="<?= base_url('./assets/images/katalog/' . $kat["gambar_katalog"]); ?>" class="img-thumbnail" height="10" alt="Katalog">
+                <img style="height: 50px;" src="<?= base_url('./assets/images/katalog/' . $kat["gambar_katalog"]); ?>" class="img-thumbnail" height="50" alt="Katalog">
                 <div class="card-body">
                     <h5 class="card-title"><?= $kat["nama_katalog"]; ?></h5>
                     <p class="card-text"><?= $kat["keterangan_katalog"] ?></p>
