@@ -6,6 +6,7 @@ class Katalog_sampah extends CI_Controller
     {
         $data = [
             'title' => 'Sistem Informasi Bank Sampah Enviro 18',
+            'users' => $this->db->get_where('tbl_users', ['email' => $this->session->userdata('email')])->row_array(),
             'katalog' => $this->Katalog_model->getAllKatalog()
         ];
 
