@@ -21,7 +21,8 @@ class Katalog_sampah extends CI_Controller
     public function search()
     {
         $data = [
-            'title' => 'Sistem Informasi Bank Sampah Enviro 18'
+            'title' => 'Sistem Informasi Bank Sampah Enviro 18',
+            'users' => $this->db->get_where('tbl_users', ['email' => $this->session->userdata('email')])->row_array(),
         ];
         $keyword = $this->input->post('keyword');
         $data['katalogs'] = $this->Katalog_model->get_katalog_keyword($keyword);
