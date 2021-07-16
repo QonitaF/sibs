@@ -10,12 +10,10 @@
             border: 1px solid black;
             border-collapse: collapse;
         }
-
         th,
         td {
             padding: 5px;
         }
-
         th {
             text-align: left;
         }

@@ -46,7 +46,7 @@
                         <input type="text" class="form-control" id="name" name="name" required>
                     </div>
                     <div class="form-group">
-                        <input name="email" type="email" id="inputEmail" class="form-control" placeholder="username or email" required autofocus>
+                        <input name="email" type="text" id="inputEmail" class="form-control" placeholder="username" required autofocus>
                     </div>
                     <div class="form-group">
                         <input name="password" type="password" id="inputPassword" class="form-control" placeholder="Password" required>
