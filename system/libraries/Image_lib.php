@@ -423,30 +423,30 @@ class CI_Image_lib {
 			$this->$val = '';
 		}
 
-		$this->image_library 		= 'gd2';
-		$this->dynamic_output 		= FALSE;
-		$this->quality 				= 90;
-		$this->create_thumb 		= FALSE;
-		$this->thumb_marker 		= '_thumb';
-		$this->maintain_ratio 		= TRUE;
-		$this->master_dim 			= 'auto';
-		$this->wm_type 				= 'text';
-		$this->wm_x_transp 			= 4;
-		$this->wm_y_transp 			= 4;
-		$this->wm_font_size 		= 17;
-		$this->wm_vrt_alignment 	= 'B';
-		$this->wm_hor_alignment 	= 'C';
-		$this->wm_padding 			= 0;
-		$this->wm_hor_offset 		= 0;
-		$this->wm_vrt_offset 		= 0;
+		$this->image_library	= 'gd2';
+		$this->dynamic_output	= FALSE;
+		$this->quality			= 90;
+		$this->create_thumb	= FALSE;
+		$this->thumb_marker	= '_thumb';
+		$this->maintain_ratio	= TRUE;
+		$this->master_dim		= 'auto';
+		$this->wm_type			= 'text';
+		$this->wm_x_transp		= 4;
+		$this->wm_y_transp		= 4;
+		$this->wm_font_size	= 17;
+		$this->wm_vrt_alignment= 'B';
+		$this->wm_hor_alignment= 'C';
+		$this->wm_padding		= 0;
+		$this->wm_hor_offset	= 0;
+		$this->wm_vrt_offset	= 0;
 		$this->wm_font_color		= '#ffffff';
-		$this->wm_shadow_distance 	= 2;
-		$this->wm_opacity 			= 50;
-		$this->create_fnc 			= 'imagecreatetruecolor';
-		$this->copy_fnc 			= 'imagecopyresampled';
-		$this->error_msg 			= array();
-		$this->wm_use_drop_shadow 	= FALSE;
-		$this->wm_use_truetype 		= FALSE;
+		$this->wm_shadow_distance= 2;
+		$this->wm_opacity		= 50;
+		$this->create_fnc		= 'imagecreatetruecolor';
+		$this->copy_fnc		= 'imagecopyresampled';
+		$this->error_msg		= array();
+		$this->wm_use_drop_shadow= FALSE;
+		$this->wm_use_truetype	= FALSE;
 	}
 
 	// --------------------------------------------------------------------

@@ -185,7 +185,7 @@ class CI_DB_pdo_sqlite_driver extends CI_DB_pdo_driver {
 	 * @param	string	$table	Table name
 	 * @param	array	$keys	INSERT keys
 	 * @param	array	$values	INSERT values
-	 * @return 	string
+	 * @returnstring
 	 */
 	protected function _replace($table, $keys, $values)
 	{

@@ -267,7 +267,7 @@ class CI_Xmlrpc {
 
 		// Types for info sent back and forth
 		$this->xmlrpcTypes = array(
-			$this->xmlrpcI4	 		=> '1',
+			$this->xmlrpcI4		=> '1',
 			$this->xmlrpcInt		=> '1',
 			$this->xmlrpcBoolean	=> '1',
 			$this->xmlrpcString		=> '1',

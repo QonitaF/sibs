@@ -166,8 +166,8 @@ class CI_Loader {
 	 *
 	 * @used-by	Mainly used by Form Helper function _get_validation_object().
 	 *
-	 * @param 	string		$class	Class name to check for
-	 * @return 	string|bool	Class object name if loaded or FALSE
+	 * @paramstring		$class	Class name to check for
+	 * @returnstring|bool	Class object name if loaded or FALSE
 	 */
 	public function is_loaded($class)
 	{
@@ -366,7 +366,7 @@ class CI_Loader {
 	 * Database Loader
 	 *
 	 * @param	mixed	$params		Database configuration options
-	 * @param	bool	$return 	Whether to return the database object
+	 * @param	bool	$returnWhether to return the database object
 	 * @param	bool	$query_builder	Whether to enable Query Builder
 	 *					(overrides the configuration setting)
 	 *
@@ -520,7 +520,7 @@ class CI_Loader {
 	 * @param	array|object|string	$vars
 	 *					An associative array or object containing values
 	 *					to be set, or a value's name if string
-	 * @param 	string	$val	Value to set, only used if $vars is a string
+	 * @paramstring	$val	Value to set, only used if $vars is a string
 	 * @return	object
 	 */
 	public function vars($vars, $val = '')
@@ -773,7 +773,7 @@ class CI_Loader {
 	 * @see CI_Config::$_config_paths
 	 *
 	 * @param	string	$path		Path to add
-	 * @param 	bool	$view_cascade	(default: TRUE)
+	 * @parambool	$view_cascade	(default: TRUE)
 	 * @return	object
 	 */
 	public function add_package_path($path, $view_cascade = TRUE)
@@ -1404,7 +1404,7 @@ class CI_Loader {
 	 *
 	 * Get a reference to a specific library or model.
 	 *
-	 * @param 	string	$component	Component name
+	 * @paramstring	$component	Component name
 	 * @return	bool
 	 */
 	protected function &_ci_get_component($component)

@@ -62,7 +62,7 @@ abstract class Positioner {
    * Class destructor
    */
   function __destruct() {
-  	clear_object($this);
+ clear_object($this);
   }
   //........................................................................
 

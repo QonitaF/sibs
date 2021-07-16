@@ -7,7 +7,7 @@
       nameP= FontP->FontFileName.data.nameP;
       namelen  = FontP->FontFileName.len;
 +     if (namelen > (128-1) ) /* prevent getting out of filename[] */
-+ 	namelen = (128-1);
++namelen = (128-1);
       while (nameP[0] == ' ') {
           nameP++;
           namelen--;
@@ -117,7 +117,7 @@
     if (f->b_base == NULL) return 0;  /* already closed */
 + 
 +   while ( (rc = read(f->fd, f->b_base, F_BUFSIZ)) >0)
-+ 	T1FileSize += rc; /* count the rest of the file */
++T1FileSize += rc; /* count the rest of the file */
 + 
     f->b_base = NULL;  /* no valid stream */
     return close(f->fd);
@@ -209,9 +209,9 @@
       xfree(vm_base);
   #endif
 +     if (!(initFont(T1FileSize))) {
-+ 	/* we are really out of memory */
-+ 	return(SCAN_OUT_OF_MEMORY);
-+ 	}
++/* we are really out of memory */
++return(SCAN_OUT_OF_MEMORY);
++}
 +     resetFont(env);
 +     rcode = scan_font(FontP);
 +     if (rcode != SCAN_OUT_OF_MEMORY) 

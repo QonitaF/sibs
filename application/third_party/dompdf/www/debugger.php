@@ -32,7 +32,7 @@ $files = glob("test/*.{html,htm,php}", GLOB_BRACE);
 
       setTimeout(function(){
         address = "../dompdf.php?base_path="+basePath+"&options[Attachment]=0&input_file="+addressPDF+"#toolbar=0&view=FitH&statusbar=0&messages=0&navpanes=0";
-  			preview.attr('src', address);
+	preview.attr('src', address);
       }, 0.1);
 		}
 		

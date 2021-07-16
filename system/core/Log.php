@@ -163,8 +163,8 @@ class CI_Log {
 	 *
 	 * Generally this function will be called using the global log_message() function
 	 *
-	 * @param	string	$level 	The error level: 'error', 'debug' or 'info'
-	 * @param	string	$msg 	The error message
+	 * @param	string	$levelThe error level: 'error', 'debug' or 'info'
+	 * @param	string	$msgThe error message
 	 * @return	bool
 	 */
 	public function write_log($level, $msg)
@@ -244,9 +244,9 @@ class CI_Log {
 	 * This is for extensibility of log formatting
 	 * If you want to change the log format, extend the CI_Log class and override this method
 	 *
-	 * @param	string	$level 	The error level
-	 * @param	string	$date 	Formatted date string
-	 * @param	string	$message 	The log message
+	 * @param	string	$levelThe error level
+	 * @param	string	$dateFormatted date string
+	 * @param	string	$messageThe log message
 	 * @return	string	Formatted log line with a new line character at the end
 	 */
 	protected function _format_line($level, $date, $message)

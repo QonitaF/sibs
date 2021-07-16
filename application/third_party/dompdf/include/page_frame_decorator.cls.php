@@ -174,7 +174,7 @@ class Page_Frame_Decorator extends Frame_Decorator {
    * @return bool true if a page break occured
    */
   function check_forced_page_break(Frame $frame) {
-    	
+   
     // Skip check if page is already split
     if ( $this->_page_full )
       return;

@@ -72,7 +72,7 @@ var cssSandpaper = new function(){
         fixLinearGradients();
         
         fixBackgrounds();
-       	fixColors();
+      fixColors();
         fixOpacity();
         setClasses();
         //fixBorderRadius();
@@ -218,7 +218,7 @@ var cssSandpaper = new function(){
         if (node.filters) {
             setGradientFilter(node, values);
         } else if (support == implementation.MOZILLA) {
-        	
+       
             node.style.backgroundImage = StringHelpers.sprintf('-moz-gradient( %s, %s, from(%s), to(%s))', values.dirBegin, values.dirEnd, values.colorStops[0].color, values.colorStops[1].color);
         } else if (support == implementation.WEBKIT) {
             var tmp = StringHelpers.sprintf('-webkit-gradient(%s, %s, %s %s, %s %s)', values.type, values.dirBegin, values.r0 ? values.r0 + ", " : "", values.dirEnd, values.r1 ? values.r1 + ", " : "", listColorStops(values.colorStops));
@@ -259,19 +259,19 @@ var cssSandpaper = new function(){
     }
     
     me.setHSLABackground = function(node, value) {
-    	var support = CSS3Helpers.reportColorSpaceSupport('HSLA', colorType.BACKGROUND);
+   var support = CSS3Helpers.reportColorSpaceSupport('HSLA', colorType.BACKGROUND);
         
         switch (support) {
             case implementation.NATIVE:
                 /* node.style.value = value;
                 break; */
             case implementation.FILTER_WORKAROUND:
-            	var rgbColor =  new RGBColor(value);
-            	
-            	if (rgbColor.a == 1) {
-            		node.style.backgroundColor = rgbColor.toHex();
-            	} else {
-            		var rgba = rgbColor.toRGBA();
+           var rgbColor =  new RGBColor(value);
+           
+           if (rgbColor.a == 1) {
+          node.style.backgroundColor = rgbColor.toHex();
+           } else {
+          var rgba = rgbColor.toRGBA();
 	                setGradientFilter(node, {
 	                    IEdir: 0,
 	                    colorStops: [{
@@ -310,25 +310,25 @@ var cssSandpaper = new function(){
 	}
     
     me.setHSLColor = function (node, property, value) {
-    	var support = CSS3Helpers.reportColorSpaceSupport('HSL', colorType.FOREGROUND);
-    	
-    	switch (support) {
+   var support = CSS3Helpers.reportColorSpaceSupport('HSL', colorType.FOREGROUND);
+   
+   switch (support) {
             case implementation.NATIVE:
                 /* node.style.value = value;
                 break; */
             case implementation.HEX_WORKAROUND:
-            	
-            	var hslColor = value.match(reHSL)[0];
-            	var hexColor = new RGBColor(hslColor).toHex()
-            	var newPropertyValue = value.replace(reHSL, hexColor);
-            	
-            	
-            	
+           
+           var hslColor = value.match(reHSL)[0];
+           var hexColor = new RGBColor(hslColor).toHex()
+           var newPropertyValue = value.replace(reHSL, hexColor);
+           
+           
+           
                 node.style[me.camelize(property)] = newPropertyValue;
                 
                 break;
         }
-    		
+  
     }
     
     
@@ -362,8 +362,8 @@ var cssSandpaper = new function(){
                 if (rule.value.indexOf('rgba(') == 0) {
                     me.setRGBABackground(nodes[j], rule.value);
                 } else if (rule.value.indexOf('hsla(') == 0 || rule.value.indexOf('hsl(') == 0) {
-                	
-                	me.setHSLABackground(nodes[j], rule.value);
+               
+               me.setHSLABackground(nodes[j], rule.value);
                 } 
             }
         }
@@ -389,42 +389,42 @@ var cssSandpaper = new function(){
 	}
     
     function fixColors() {
-    	var support = CSS3Helpers.reportColorSpaceSupport('HSL', colorType.FOREGROUND);
-    	if (support == implementation.NATIVE) {
+   var support = CSS3Helpers.reportColorSpaceSupport('HSL', colorType.FOREGROUND);
+   if (support == implementation.NATIVE) {
             return;
         } 
         
         var colorRules = getRuleList('color').values;
         
         var properties = ['color', 'border', 
-        	'border-left', 	'border-right', 'border-bottom', 'border-top',
-        	'border-left-color', 'border-right-color', 'border-bottom-color', 'border-top-color'];
+       'border-left','border-right', 'border-bottom', 'border-top',
+       'border-left-color', 'border-right-color', 'border-bottom-color', 'border-top-color'];
         
         for (var i=0; i<properties.length; i++) {
-        	var rules = getRuleList(properties[i]).values;
-    		colorRules = colorRules.concat(rules);
-       	} 
-       	
+       var rules = getRuleList(properties[i]).values;
+  colorRules = colorRules.concat(rules);
+      } 
+      
         for (var i in colorRules) {
             var rule = colorRules[i];
             
             var nodes = document.querySelectorAll(rule.selector);
             for (var j = 0; j < nodes.length; j++) {
-            	var isBorder = (rule.name.indexOf('border') == 0);
-            	var ruleMatch = rule.value.match(reHSL);
-            	
-            	
+           var isBorder = (rule.name.indexOf('border') == 0);
+           var ruleMatch = rule.value.match(reHSL);
+           
+           
                 if (ruleMatch) {
-                	
-                	var cssProperty;
-                	if (isBorder && rule.name.indexOf('-color') < 0) {
-                		cssProperty = rule.name;
-                	} else {
-                		cssProperty = rule.name;
-                	}
-                	
-                	me.setHSLColor(nodes[j], cssProperty, rule.value);
-                			
+               
+               var cssProperty;
+               if (isBorder && rule.name.indexOf('-color') < 0) {
+              cssProperty = rule.name;
+               } else {
+              cssProperty = rule.name;
+               }
+               
+               me.setHSLColor(nodes[j], cssProperty, rule.value);
+              	
                 } 
             }
         }
@@ -758,7 +758,7 @@ var CSS3Helpers = new function(){
                 resultantMatrix = resultantMatrix.x(matrix);
             } 
             catch (ex) {
-            	
+           
 				if (doThrowIfError) {
 					var method = transform.split('(')[0];
 
@@ -979,28 +979,28 @@ var CSS3Helpers = new function(){
     }
     
     me.reportColorSpaceSupport = function(colorSpace, type){
-    	
+   
         if (!cache[colorSpace + type]) {
             var r;
             var div = document.createElement('div');
             
             switch (type) {
-            	
-            	case colorType.BACKGROUND:
-            		
+           
+           case colorType.BACKGROUND:
+          
 		            switch(colorSpace) {
-		            	case 'RGBA':
-		            		div.style.cssText = "background-color: rgba(255, 32, 34, 0.5)";
-		            		break;
-		            	case 'HSL': 
-		            		div.style.cssText = "background-color: hsl(0,0%,100%)";
-		            		break;
-		            	case 'HSLA': 
-		            		div.style.cssText = "background-color: hsla(0,0%,100%,.5)";
-		            		break;
-		            	
-		            	default:
-		            		break;
+		           case 'RGBA':
+		          div.style.cssText = "background-color: rgba(255, 32, 34, 0.5)";
+		          break;
+		           case 'HSL': 
+		          div.style.cssText = "background-color: hsl(0,0%,100%)";
+		          break;
+		           case 'HSLA': 
+		          div.style.cssText = "background-color: hsla(0,0%,100%,.5)";
+		          break;
+		           
+		           default:
+		          break;
 		            }
 	            
 	            
@@ -1018,19 +1018,19 @@ var CSS3Helpers = new function(){
 		            }
 		            break;
 		        case colorType.FOREGROUND:
-		        	switch(colorSpace) {
-		            	case 'RGBA':
-		            		div.style.cssText = "color: rgba(255, 32, 34, 0.5)";
-		            		break;
-		            	case 'HSL': 
-		            		div.style.cssText = "color: hsl(0,0%,100%)";
-		            		break;
-		            	case 'HSLA': 
-		            		div.style.cssText = "color: hsla(0,0%,100%,.5)";
-		            		break;
-		            	
-		            	default:
-		            		break;
+		       switch(colorSpace) {
+		           case 'RGBA':
+		          div.style.cssText = "color: rgba(255, 32, 34, 0.5)";
+		          break;
+		           case 'HSL': 
+		          div.style.cssText = "color: hsl(0,0%,100%)";
+		          break;
+		           case 'HSLA': 
+		          div.style.cssText = "color: hsla(0,0%,100%,.5)";
+		          break;
+		           
+		           default:
+		          break;
 		            }
 		           
 		            if (div.style.color) {
@@ -1871,7 +1871,7 @@ CSSHelpers = new function(){
 	 * public domain according to the site's copyright statement.
 	 * 
 	 * @param {Object} obj - an HTML element.  If you want to search a whole document, set
-	 * 		this to the document object.
+	 *	this to the document object.
 	 * @param {String} className - the class name of the objects to return
 	 * @return {Array} - the list of objects of class cls. 
 	 */
@@ -2215,18 +2215,18 @@ function RGBColor(color_string){
         re: /^hsla\((\d{1,3}),\s*(\d{1,3}%),\s*(\d{1,3}%),\s*(0{0,1}\.\d{1,}|0\.{0,}0*|1\.{0,}0*)\)$/,
         example: ['hsla(0,100%,50%,0.2)'],
         process: function(bits){
-        	var result = hsl2rgb(parseInt(bits[1]), parseInt(bits[2]), parseInt(bits[3]), parseFloat(bits[4]));
-        	
-        	return [result.r, result.g, result.b, parseFloat(bits[4])];
+       var result = hsl2rgb(parseInt(bits[1]), parseInt(bits[2]), parseInt(bits[3]), parseFloat(bits[4]));
+       
+       return [result.r, result.g, result.b, parseFloat(bits[4])];
             
         }
     }, {
         re: /^hsl\((\d{1,3}),\s*(\d{1,3}%),\s*(\d{1,3}%)\)$/,
         example: ['hsl(0,100%,50%)'],
         process: function(bits){
-        	var result = hsl2rgb(parseInt(bits[1]), parseInt(bits[2]), parseInt(bits[3]), 1);
-        	
-        	return [result.r, result.g, result.b, 1];
+       var result = hsl2rgb(parseInt(bits[1]), parseInt(bits[2]), parseInt(bits[3]), 1);
+       
+       return [result.r, result.g, result.b, 1];
             
         }
     }];

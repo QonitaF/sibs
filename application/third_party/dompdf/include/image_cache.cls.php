@@ -162,8 +162,8 @@ class Image_Cache {
           $resolved_url .= '.'.$ext;
         }
  
- 		//Don't put replacement image into cache - otherwise it will be deleted on cache cleanup.
- 		//Only execute on successfull caching of remote image.
+	//Don't put replacement image into cache - otherwise it will be deleted on cache cleanup.
+	//Only execute on successfull caching of remote image.
         self::$_cache[$full_url] = array($resolved_url,$ext);
 
         } else {

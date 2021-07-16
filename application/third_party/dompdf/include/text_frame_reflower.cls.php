@@ -306,7 +306,7 @@ class Text_Frame_Reflower extends Frame_Reflower {
       
       if ((!$is_inline_frame && !$this->_frame->get_prev_sibling()) || 
           ( $is_inline_frame && !$parent->get_prev_sibling())) {
-      	$t = ltrim($t);
+     $t = ltrim($t);
       }
       
       $this->_frame->set_text( $t );

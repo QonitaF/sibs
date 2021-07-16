@@ -25,7 +25,7 @@ var EventHelpers = new function(){
 		if (document.createEventObject){
 	        // dispatch for IE
 	        globalEvent = document.createEventObject();
-	    } else 	if (document.createEvent) {
+	    } elseif (document.createEvent) {
 			globalEvent = document.createEvent("HTMLEvents");
 		} 
 		
@@ -194,8 +194,8 @@ var EventHelpers = new function(){
      * Sets a mouse move event of a document.
      *
      * @deprecated - use only if compatibility with IE4 and NS4 is necessary.  Otherwise, just
-     * 		use EventHelpers.addEvent(window, 'mousemove', func) instead. Cannot be used to add
-     * 		multiple mouse move event handlers.
+     *	use EventHelpers.addEvent(window, 'mousemove', func) instead. Cannot be used to add
+     *	multiple mouse move event handlers.
      *
      * @param {Function} func - the function that you want a mouse event to fire.
      */

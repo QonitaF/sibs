@@ -328,7 +328,7 @@ class CI_Session_database_driver extends CI_Session_driver implements SessionHan
 	 *
 	 * Deletes expired sessions
 	 *
-	 * @param	int 	$maxlifetime	Maximum lifetime of sessions
+	 * @param	int$maxlifetime	Maximum lifetime of sessions
 	 * @return	bool
 	 */
 	public function gc($maxlifetime)

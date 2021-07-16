@@ -304,7 +304,7 @@ class CI_Security {
 	 * Get CSRF Hash
 	 *
 	 * @see		CI_Security::$_csrf_hash
-	 * @return 	string	CSRF hash
+	 * @returnstring	CSRF hash
 	 */
 	public function get_csrf_hash()
 	{
@@ -341,15 +341,15 @@ class CI_Security {
 	 *	 runtime processing.
 	 *
 	 * @link	http://channel.bitflux.ch/wiki/XSS_Prevention
-	 * 		Based in part on some code and ideas from Bitflux.
+	 *	Based in part on some code and ideas from Bitflux.
 	 *
 	 * @link	http://ha.ckers.org/xss.html
-	 * 		To help develop this script I used this great list of
+	 *	To help develop this script I used this great list of
 	 *		vulnerabilities along with a few other hacks I've
 	 *		harvested from examining vulnerabilities in other programs.
 	 *
 	 * @param	string|string[]	$str		Input data
-	 * @param 	bool		$is_image	Whether the input is an image
+	 * @parambool		$is_image	Whether the input is an image
 	 * @return	string
 	 */
 	public function xss_clean($str, $is_image = FALSE)
@@ -747,7 +747,7 @@ class CI_Security {
 	 * Sanitize Filename
 	 *
 	 * @param	string	$str		Input file name
-	 * @param 	bool	$relative_path	Whether to preserve paths
+	 * @parambool	$relative_path	Whether to preserve paths
 	 * @return	string
 	 */
 	public function sanitize_filename($str, $relative_path = FALSE)
@@ -1043,8 +1043,8 @@ class CI_Security {
 	 * Do Never Allowed
 	 *
 	 * @used-by	CI_Security::xss_clean()
-	 * @param 	string
-	 * @return 	string
+	 * @paramstring
+	 * @returnstring
 	 */
 	protected function _do_never_allowed($str)
 	{

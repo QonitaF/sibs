@@ -343,7 +343,7 @@ class CI_Session_redis_driver extends CI_Session_driver implements SessionHandle
 	 *
 	 * Deletes expired sessions
 	 *
-	 * @param	int 	$maxlifetime	Maximum lifetime of sessions
+	 * @param	int$maxlifetime	Maximum lifetime of sessions
 	 * @return	bool
 	 */
 	public function gc($maxlifetime)

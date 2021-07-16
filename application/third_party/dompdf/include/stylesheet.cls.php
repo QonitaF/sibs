@@ -321,7 +321,7 @@ class Stylesheet {
     //see _css_selector_to_xpath
 
     if ( !in_array($selector[0], array(" ", ">", ".", "#", "+", ":", "[")) ) {
-    	$d++;
+   $d++;
     }
 
     if (DEBUGCSS) {
@@ -1097,19 +1097,19 @@ class Stylesheet {
       /* Instead of short code, prefer the typical case with fast code
 	  $important = preg_match("/(.*?)!\s*important/",$prop,$match);
       if ( $important ) {
-      	$prop = $match[1];
+     $prop = $match[1];
       }
       $prop = trim($prop);
       */
       if (DEBUGCSS) print '(';
- 	  $important = false;
+  $important = false;
       $prop = trim($prop);
       if (substr($prop,-9) === 'important') {
-      	$prop_tmp = rtrim(substr($prop,0,-9));
-      	if (substr($prop_tmp,-1) === '!') {
-      		$prop = rtrim(substr($prop_tmp,0,-1));
-      		$important = true;
-      	}
+     $prop_tmp = rtrim(substr($prop,0,-9));
+     if (substr($prop_tmp,-1) === '!') {
+    $prop = rtrim(substr($prop_tmp,0,-1));
+    $important = true;
+     }
       }
 
       if ($prop == "") {

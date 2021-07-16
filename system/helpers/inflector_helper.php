@@ -215,7 +215,7 @@ if ( ! function_exists('humanize'))
 	 * Takes multiple words separated by the separator and changes them to spaces
 	 *
 	 * @param	string	$str		Input string
-	 * @param 	string	$separator	Input separator
+	 * @paramstring	$separator	Input separator
 	 * @return	string
 	 */
 	function humanize($str, $separator = '_')

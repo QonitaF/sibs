@@ -145,7 +145,7 @@ class CI_URI {
 	/**
 	 * Set URI String
 	 *
-	 * @param 	string	$str
+	 * @paramstring	$str
 	 * @return	void
 	 */
 	protected function _set_uri_string($str)
@@ -402,9 +402,9 @@ class CI_URI {
 	 * segment array.
 	 *
 	 * @see		CI_URI::uri_to_assoc()
-	 * @param 	int	$n		Index (default: 3)
-	 * @param 	array	$default	Default values
-	 * @return 	array
+	 * @paramint	$n		Index (default: 3)
+	 * @paramarray	$default	Default values
+	 * @returnarray
 	 */
 	public function ruri_to_assoc($n = 3, $default = array())
 	{

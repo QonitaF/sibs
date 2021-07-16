@@ -261,7 +261,7 @@ abstract class CI_DB_query_builder extends CI_DB_driver {
 	 *
 	 * @var	array
 	 */
-	protected $qb_no_escape 			= array();
+	protected $qb_no_escape		= array();
 
 	/**
 	 * QB Cache No Escape data
@@ -1478,7 +1478,7 @@ abstract class CI_DB_query_builder extends CI_DB_driver {
 	 * Compiles batch insert strings and runs the queries
 	 *
 	 * @param	string	$table	Table to insert into
-	 * @param	array	$set 	An associative array of insert values
+	 * @param	array	$setAn associative array of insert values
 	 * @param	bool	$escape	Whether to escape values and identifiers
 	 * @return	int	Number of rows inserted or FALSE on failure
 	 */
@@ -2673,7 +2673,7 @@ abstract class CI_DB_query_builder extends CI_DB_driver {
 		{
 			$qb_variable	= 'qb_'.$val;
 			$qb_cache_var	= 'qb_cache_'.$val;
-			$qb_new 	= $this->$qb_cache_var;
+			$qb_new= $this->$qb_cache_var;
 
 			for ($i = 0, $c = count($this->$qb_variable); $i < $c; $i++)
 			{

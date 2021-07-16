@@ -124,7 +124,7 @@ if ( ! function_exists('mb_substr'))
 	 * @link	http://php.net/mb_substr
 	 * @param	string	$str
 	 * @param	int	$start
-	 * @param	int 	$length
+	 * @param	int$length
 	 * @param	string	$encoding
 	 * @return	string
 	 */

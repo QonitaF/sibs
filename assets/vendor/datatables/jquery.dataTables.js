@@ -3244,7 +3244,7 @@
 		}
 		
 		/* ARIA role for the rows */
-	 	$(thead).find('>tr').attr('role', 'row');
+	$(thead).find('>tr').attr('role', 'row');
 	
 		/* Deal with the footer - add classes if required */
 		$(thead).find('>tr>th, >tr>td').addClass( classes.sHeaderTH );
@@ -7230,10 +7230,10 @@
 	// @todo - Is there need for an augment function?
 	// _Api.augment = function ( inst, name )
 	// {
-	// 	// Find src object in the structure from the name
-	// 	var parts = name.split('.');
+	//// Find src object in the structure from the name
+	//var parts = name.split('.');
 	
-	// 	_Api.extend( inst, obj );
+	//_Api.extend( inst, obj );
 	// };
 	
 	
@@ -8787,7 +8787,7 @@
 					return { // use a new object, in case someone changes the values
 						row:    el._DT_CellIndex.row,
 						column: el._DT_CellIndex.column
-	 				};
+				};
 				} )
 				.toArray();
 	
@@ -14546,8 +14546,8 @@
 		},
 		
 		first_last_numbers: function (page, pages) {
-	 		return ['first', _numbers(page, pages), 'last'];
-	 	},
+		return ['first', _numbers(page, pages), 'last'];
+	},
 	
 		// For testing and plug-ins to use
 		_numbers: _numbers,

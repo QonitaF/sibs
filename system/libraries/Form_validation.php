@@ -324,7 +324,7 @@ class CI_Form_validation {
 	 *
 	 * @param	string	$field	Field name
 	 * @param	string	$prefix	HTML start tag
-	 * @param 	string	$suffix	HTML end tag
+	 * @paramstring	$suffix	HTML end tag
 	 * @return	string
 	 */
 	public function error($field, $prefix = '', $suffix = '')
@@ -825,9 +825,9 @@ class CI_Form_validation {
 	/**
 	 * Get the error message for the rule
 	 *
-	 * @param 	string $rule 	The rule name
-	 * @param 	string $field	The field name
-	 * @return 	string
+	 * @paramstring $ruleThe rule name
+	 * @paramstring $field	The field name
+	 * @returnstring
 	 */
 	protected function _get_error_message($rule, $field)
 	{

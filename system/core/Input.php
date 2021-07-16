@@ -593,7 +593,7 @@ class CI_Input {
 	 *
 	 *	- Unsets $_GET data, if query strings are not enabled
 	 *	- Cleans POST, COOKIE and SERVER data
-	 * 	- Standardizes newline characters to PHP_EOL
+	 *- Standardizes newline characters to PHP_EOL
 	 *
 	 * @return	void
 	 */
@@ -829,7 +829,7 @@ class CI_Input {
 	 *
 	 * Test to see if a request contains the HTTP_X_REQUESTED_WITH header.
 	 *
-	 * @return 	bool
+	 * @returnbool
 	 */
 	public function is_ajax_request()
 	{
@@ -860,7 +860,7 @@ class CI_Input {
 	 *
 	 * @param	bool	$upper	Whether to return in upper or lower case
 	 *				(default: FALSE)
-	 * @return 	string
+	 * @returnstring
 	 */
 	public function method($upper = FALSE)
 	{

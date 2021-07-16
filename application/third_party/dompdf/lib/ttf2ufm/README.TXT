@@ -17,8 +17,8 @@ Setting up a Truetype font for usage with TCPDF:
      $ php -q makefontuni.php myfont.ttf myfont.ufm
   3) Copy the resulting .php, .z and .ctg.z file to the TCPDF font directory.
   4) Rename php font files variations for bold and italic using the following schema:
-  	[basic-font-name]b.php for bold variation
-  	[basic-font-name]i.php for oblique variation
-  	[basic-font-name]bi.php for bold oblique variation
+ [basic-font-name]b.php for bold variation
+ [basic-font-name]i.php for oblique variation
+ [basic-font-name]bi.php for bold oblique variation
   5) Convert all fonts filenames to lowercase.
-  	
+ 

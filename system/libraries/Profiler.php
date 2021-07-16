@@ -492,7 +492,7 @@ class CI_Profiler {
 				$val = print_r($val, TRUE);
                                 
 				$pre       = '<pre>' ;
- 				$pre_close = '</pre>';
+			$pre_close = '</pre>';
 			}
 
 			$output .= '<tr><td style="padding:5px;vertical-align:top;color:#900;background-color:#ddd;">'
@@ -507,7 +507,7 @@ class CI_Profiler {
 	/**
 	 * Compile session userdata
 	 *
-	 * @return 	string
+	 * @returnstring
 	 */
 	protected function _compile_session_data()
 	{
@@ -530,7 +530,7 @@ class CI_Profiler {
 				$val = print_r($val, TRUE);
                                 
 				$pre       = '<pre>' ;
- 				$pre_close = '</pre>';
+			$pre_close = '</pre>';
 			}
 
 			$output .= '<tr><td style="padding:5px;vertical-align:top;color:#900;background-color:#ddd;">'

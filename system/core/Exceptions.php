@@ -113,7 +113,7 @@ class CI_Exceptions {
 	 * @uses	CI_Exceptions::show_error()
 	 *
 	 * @param	string	$page		Page URI
-	 * @param 	bool	$log_error	Whether to log the error
+	 * @parambool	$log_error	Whether to log the error
 	 * @return	void
 	 */
 	public function show_404($page = '', $log_error = TRUE)
@@ -150,7 +150,7 @@ class CI_Exceptions {
 	 * @param	string		$heading	Page heading
 	 * @param	string|string[]	$message	Error message
 	 * @param	string		$template	Template name
-	 * @param 	int		$status_code	(default: 500)
+	 * @paramint		$status_code	(default: 500)
 	 *
 	 * @return	string	Error page output
 	 */

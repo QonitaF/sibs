@@ -484,7 +484,7 @@ class PDFLib_Adapter implements Canvas {
    */
   protected function _set_stroke_color($color) {
     if($this->_last_stroke_color == $color)
-    	return;
+   return;
 
     $this->_last_stroke_color = $color;
 
@@ -511,7 +511,7 @@ class PDFLib_Adapter implements Canvas {
    */
   protected function _set_fill_color($color) {
     if($this->_last_fill_color == $color)
-    	return;
+   return;
 
     $this->_last_fill_color = $color;
 

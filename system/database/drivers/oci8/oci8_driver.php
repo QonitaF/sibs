@@ -593,7 +593,7 @@ class CI_DB_oci8_driver extends CI_DB {
 	 *
 	 * @param	string	$table	Table name
 	 * @param	array	$keys	INSERT keys
-	 * @param 	array	$values	INSERT values
+	 * @paramarray	$values	INSERT values
 	 * @return	string
 	 */
 	protected function _insert_batch($table, $keys, $values)

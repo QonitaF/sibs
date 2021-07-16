@@ -102,7 +102,7 @@ class List_Bullet_Positioner extends Positioner {
     $style = $p->get_style();
     $font_size = $style->get_font_size();
     $line_height = $style->length_in_pt($style->line_height, $font_size);
-    $y += ($line_height - $font_size) / 2;  	
+    $y += ($line_height - $font_size) / 2; 
 	 
     //Position is x-end y-top of character position of the bullet.    
     $this->_frame->set_position($x, $y);
